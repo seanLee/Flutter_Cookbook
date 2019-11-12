@@ -9,12 +9,12 @@ class MyForm extends StatelessWidget {
       appBar: AppBar(
         title: Text("Form"),
       ),
-      body: MyCustomForm(),
+      body: _MyCustomForm(),
     ));
   }
 }
 
-class MyCustomForm extends StatefulWidget {
+class _MyCustomForm extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -22,7 +22,7 @@ class MyCustomForm extends StatefulWidget {
   }
 }
 
-class _MyCustomFormState extends State<MyCustomForm> {
+class _MyCustomFormState extends State<_MyCustomForm> {
   final _formKey = GlobalKey<FormState>();
 
   @override
