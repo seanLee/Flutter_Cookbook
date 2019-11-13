@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class MyTap extends StatelessWidget {
+class MyGesture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    final title = 'InkWll Demo';
+
+    final title = "Gesture Demo";
 
     return MaterialApp(
       title: title,
-      home: _MyHomePage(title: title),
+      home: _MyPage(title: title),
     );
   }
 }
 
-class _MyHomePage extends StatelessWidget {
+class _MyPage extends StatelessWidget {
   final String title;
 
-  _MyHomePage({Key key, this.title}) : super(key: key);
+  _MyPage({Key key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +27,7 @@ class _MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: Center(
-        child: Center(
-          child: _MyButton(),
-        ),
+        child: _MyButton(),
       ),
     );
   }
@@ -38,15 +37,19 @@ class _MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return InkWell(
+    return GestureDetector(
       onTap: () {
-        Scaffold.of(context).showSnackBar(SnackBar(
-          content: Text('Tap'),
-        ));
+        final snackBar = SnackBar(content: Text('Tap'));
+
+        Scaffold.of(context).showSnackBar(snackBar);
       },
       child: Container(
         padding: EdgeInsets.all(12.0),
-        child: Text('Flat Button'),
+        decoration: BoxDecoration(
+          color: Theme.of(context).buttonColor,
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child: Text('My Button'),
       ),
     );
   }
