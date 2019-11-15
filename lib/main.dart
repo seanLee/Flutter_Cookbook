@@ -19,6 +19,11 @@ import 'cookbook_chapter18.dart' as prefix18;
 import 'cookbook_chapter19.dart' as prefix19;
 import 'cookbook_chapter20.dart' as prefix20;
 import 'cookbook_chapter21.dart' as prefix21;
+import 'cookbook_chapter22.dart' as prefix22;
+import 'cookbook_chapter23.dart' as prefix23;
+import 'cookbook_chapter24.dart' as prefix24;
+import 'cookbook_chapter25.dart' as prefix25;
+import 'cookbook_chapter26.dart' as prefix26;
 
 void main() => runApp(MyApp());
 
@@ -40,7 +45,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: prefix21.MyCachedImage(),
+      home: prefix26.FirstRoute(),
     );
   }
 }
