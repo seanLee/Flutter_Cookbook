@@ -28,6 +28,8 @@ import 'cookbook_chapter27.dart' as prefix27;
 import 'cookbook_chapter28.dart' as prefix28;
 import 'cookbook_chapter29.dart' as prefix29;
 import 'cookbook_chapter30.dart' as prefix30;
+import 'cookbook_chapter31.dart' as prefix31;
+import 'cookbook_chapter32.dart' as prefix32;
 
 void main() => runApp(MyApp());
 
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: prefix30.MyScreen(),
+      home: prefix32.MyApp(),
     );
   }
 }
